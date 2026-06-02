@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { GitHub, LinkedIn, Mail, Code, Server, Database, Menu, X } from "lucide-react";
+import { useState } from 'react';
+import { Globe, Mail, Code, Server, Database, Menu, X } from "lucide-react";
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -156,11 +157,10 @@ export default function Portfolio() {
             <Mail size={22} />
           </a>
           <a href="https://github.com" target="_blank" rel="noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition text-slate-300 hover:text-white">
-            <Github size={22} />
+            <Globe size={22} />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition text-slate-300 hover:text-white">
-            {/* Corretto qui: prima era 'Linkedin' con la 'd' minuscola */}
-            <LinkedIn size={22} />
+            <Globe size={22} />
           </a>
         </div>
       </section>
@@ -169,6 +169,7 @@ export default function Portfolio() {
       <footer className="border-t border-slate-800 py-6 text-center text-xs text-slate-500 font-mono">
         © {new Date().getFullYear()} - Sviluppato con React & Tailwind
       </footer>
+      <Analytics />
     </div>
   );
 }
