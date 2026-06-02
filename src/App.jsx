@@ -156,10 +156,9 @@ export default function Portfolio() {
             <Mail size={22} />
           </a>
           <a href="https://github.com" target="_blank" rel="noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition text-slate-300 hover:text-white">
-            <Github size={22} />
+            <GitHub size={22} />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition text-slate-300 hover:text-white">
-            {/* Corretto qui: prima era 'Linkedin' con la 'd' minuscola */}
             <LinkedIn size={22} />
           </a>
         </div>
