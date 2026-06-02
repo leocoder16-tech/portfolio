@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { GitHub, LinkedIn, Mail, Code, Server, Database, Menu, X } from "lucide-react";
+import { GitHub, LinkedIn, Mail, Code, Server, Database, Menu, X } from 'lucide-react';
 
-export default function Portfolio() {
+export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const skills = [
@@ -32,7 +32,7 @@ export default function Portfolio() {
       <nav className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800 z-50">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            {"<MattiaMungari />"}
+            &lt;DevName /&gt;
           </span>
           
           {/* Desktop Menu */}
@@ -45,7 +45,7 @@ export default function Portfolio() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-slate-400 hover:text-white" aria-label="Toggle menu">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-slate-400 hover:text-white">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -66,10 +66,10 @@ export default function Portfolio() {
       <section id="home" className="pt-32 pb-20 px-4 max-w-4xl mx-auto text-center md:text-left flex flex-col justify-center min-h-[80vh]">
         <p className="text-cyan-400 font-mono text-sm mb-3">Ciao, il mio nome è</p>
         <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
-          Mattia Mungari.
+          Tuonome Cognome.
         </h1>
         <h2 className="text-3xl md:text-5xl font-bold text-slate-400 mb-6">
-          Sviluppo soluzioni web e applicazioni.
+          Sviluppo solutions web e applicazioni.
         </h2>
         <p className="text-lg text-slate-400 max-w-xl mb-8">
           Studente di Informatica e Telecomunicazioni a Crotone. Trasformo idee e problemi in codice pulito, efficiente e moderno.
@@ -82,14 +82,14 @@ export default function Portfolio() {
       </section>
 
       {/* CHI SONO */}
-      <section id="chi-sono" className="py-20 px-4 bg-slate-800/20 border-t border-slate-800">
+      <section id="chi-sono" className="py-20 px-4 bg-slate-850 bg-opacity-40 border-t border-slate-800">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 border-b border-slate-800 pb-2">01. Chi Sono</h2>
           <p className="text-slate-400 leading-relaxed mb-4">
-            Frequentando il <strong>Polo Tecnologico Ciliberto-Donegani di Crotone</strong>, ho sviluppato una forte passione per la logica della programmazione e l'architettura delle reti. 
+            Frequentando il Polo Tecnologico Donegani-Ciliberto di Crotone, ho sviluppato una forte passione per la logica della programmazione e l'architettura delle reti.
           </p>
           <p className="text-slate-400 leading-relaxed">
-            Non mi limito a quello che impariamo in classe: nel tempo libero sperimento con framework moderni come <strong>React</strong> e tecnologie Cloud come <strong>Firebase</strong> per creare applicazioni web complete e scalabili, pronte per risolvere problemi reali.
+            Non mi limito a quello che impariamo in classe: nel tempo libero sperimento con framework moderni come React e tecnologie Cloud come Firebase per creare applicazioni web complete e scalabili, pronte per risolvere problemi reali.
           </p>
         </div>
       </section>
@@ -119,7 +119,7 @@ export default function Portfolio() {
       </section>
 
       {/* PROGETTI */}
-      <section id="progetti" className="py-20 px-4 bg-slate-800/20 border-t border-slate-800">
+      <section id="progetti" className="py-20 px-4 bg-slate-850 bg-opacity-40 border-t border-slate-800">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 border-b border-slate-800 pb-2">03. Progetti Estivi</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -136,7 +136,7 @@ export default function Portfolio() {
                 </div>
                 <div className="flex flex-wrap gap-2 pt-4">
                   {proj.tech.map((t, i) => (
-                    <span key={i} className="text-xs font-mono text-slate-400 bg-slate-800 px-2 py-0.5 rounded">{t}</span>
+                    <span key={i} className="text-xs font-mono text-slate-500">{t}</span>
                   ))}
                 </div>
               </div>
@@ -149,7 +149,7 @@ export default function Portfolio() {
       <section id="contatti" className="py-20 px-4 text-center max-w-2xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Mettiamoci in contatto</h2>
         <p className="text-slate-400 mb-8">
-          Sei un'attività locale o hai bisogno di digitalizzare un'idea? Sono disponibile per collaborazioni e progetti freelance durante l'estate.
+          Sei un'attività locale a Crotone o hai bisogno di digitalizzare un'idea? Sono disponibile per collaborazioni e progetti freelance durante l'estate.
         </p>
         <div className="flex justify-center space-x-6">
           <a href="mailto:tuaimail@esempio.com" className="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition text-slate-300 hover:text-white">
